@@ -11,6 +11,7 @@ namespace AreaCalculator
             ILogger logger = new ConsoleLogger();
             IReader reader = new ConsoleReader();
             IList<Shapes> shapes = Enum.GetValues<Shapes>();
+            
             logger.Log("Enter the number of the chosen shape:");
             for (int i = 0; i < shapes.Count; i++)
             {
@@ -62,6 +63,12 @@ namespace AreaCalculator
                     float height3 = float.Parse(reader.Read());
                     logger.Log($"The area of the trapezoid is {new Trapezoid(base2, base3, height3).Area}");
                     logger.Log($"The perimeter of the trapezoid is {new Trapezoid(base2, base3, height3).Perimeter}");
+                    break;
+                case Shapes.Circle:
+                    logger.Log("Enter the radius:");
+                    float radius = float.Parse(reader.Read());
+                    logger.Log($"The area of the circle is {new Circle(radius).Area}");
+                    logger.Log($"The perimeter of the circle is {new Circle(radius).Perimeter}");
                     break;
                 default:
                     logger.Log("Unknown shape");

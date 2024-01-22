@@ -7,4 +7,5 @@ public enum Shapes
     Square,
     Rhombus,
     Trapezoid,
+    Circle
 }

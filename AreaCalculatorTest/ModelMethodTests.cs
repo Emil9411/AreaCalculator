@@ -64,4 +64,16 @@ public class ModelMethodTests
         Assert.That(new Trapezoid(3, 2, 90).Perimeter, Is.EqualTo(8105.5f).Within(0.00000001));
     }
     
+    [Test]
+    public void CircleAreaTest()
+    {
+        Assert.That(new Circle(3).Area, Is.EqualTo(28.2743339f).Within(0.00000001));
+    }
+    
+    [Test]
+    public void CirclePerimeterTest()
+    {
+        Assert.That(new Circle(3).Perimeter, Is.EqualTo(18.8495559f).Within(0.00000001));
+    }
+    
 }
